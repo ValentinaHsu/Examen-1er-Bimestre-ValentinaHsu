@@ -12,8 +12,11 @@ public class Animalitos : MonoBehaviour
     {
         int alimento;
         int precio;
-        if (dias >= 3)
+        if (dias < 3)
         {
+          Debug.Log("La cantidad de dias no puede ser menor de 3");
+        }
+        else { 
             if (codigo == "G")
             {
                 alimento = 300 * dias;
@@ -41,15 +44,9 @@ public class Animalitos : MonoBehaviour
                 Debug.Log("El codigo ingresado no es valido");
             }
         }
-        else
-        {
-            Debug.Log("La cantidad de dias no puede ser menor de 3");
-        }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+       
 }
+
+   
+
